@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Calendar, Clock, User, Mail, Phone, MessageSquare, CheckCircle, X } from 'lucide-react';
+import { Calendar, Clock, User, MessageSquare, CheckCircle, X } from 'lucide-react';
 
 interface BookingProps {
   darkMode: boolean;
@@ -177,7 +177,7 @@ Booking submitted on: ${new Date().toLocaleString()}
             Thank You for Working with Us!
           </h3>
           <p className={`text-lg mb-6 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-            Your booking request has been submitted successfully. We'll get back to you shortly to confirm your appointment.
+            Your booking request has been submitted successfully.  We&rsquo;ll get back to you shortly to confirm your appointment.
           </p>
           
           {/* Booking Details */}
@@ -234,7 +234,7 @@ Booking submitted on: ${new Date().toLocaleString()}
             <p className={`text-lg mb-6 ${
               darkMode ? 'text-gray-300' : 'text-gray-600'
             }`}>
-              Your booking request has been sent. We'll confirm your appointment shortly.
+              Your booking request has been sent. We&apos;ll confirm your appointment shortly.
             </p>
             <div className={`inline-flex items-center space-x-2 px-6 py-3 rounded-full ${
               darkMode 

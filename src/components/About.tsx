@@ -10,32 +10,24 @@ const About: React.FC<AboutProps> = ({ darkMode }) => {
     <section id="about" className={`py-20 ${darkMode ? 'bg-gray-800' : 'bg-white'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className={`text-4xl md:text-5xl font-bold mb-4 ${
-            darkMode ? 'text-white' : 'text-gray-900'
-          }`}>
+          <h2 className={`text-4xl md:text-5xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
             About Me
           </h2>
-          <p className={`text-xl max-w-3xl mx-auto ${
-            darkMode ? 'text-gray-300' : 'text-gray-600'
-          }`}>
-            I'm a passionate front-end developer with a keen eye for design and a love for creating exceptional user experiences.
+          <p className={`text-xl max-w-3xl mx-auto ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+            I&#39;m a passionate front-end developer with a keen eye for design and a love for creating exceptional user experiences.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <p className={`text-lg leading-relaxed ${
-              darkMode ? 'text-gray-300' : 'text-gray-700'
-            }`}>
+            <p className={`text-lg leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
               With a strong foundation in modern web technologies, I specialize in building responsive, 
               accessible, and performant web applications. I believe in writing clean, maintainable code 
               and staying up-to-date with the latest industry trends and best practices.
             </p>
-            
-            <p className={`text-lg leading-relaxed ${
-              darkMode ? 'text-gray-300' : 'text-gray-700'
-            }`}>
-              When I'm not coding, you'll find me exploring new design patterns, contributing to open-source 
+
+            <p className={`text-lg leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+              When I&#39;m not coding, you&#39;ll find me exploring new design patterns, contributing to open-source 
               projects, or learning about emerging technologies that can enhance user experiences.
             </p>
 

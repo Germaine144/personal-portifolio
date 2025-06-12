@@ -1,4 +1,6 @@
 import React from 'react';
+import Image from 'next/image';
+
 import { ExternalLink, Github } from 'lucide-react';
 
 interface ProjectsProps {
@@ -17,7 +19,8 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
     },
     {
       title: 'Person Journel  App',
-      description: 'The Personal Journal App lets users securely write, edit, and organize daily thoughts, goals, and reflections with a clean interface.',
+      description: 'The Personal Journal App let&apos;s users securely write, edit, and organize daily thoughts, goals, and reflections with a clean interface.',
+
       image: 'https://images.pexels.com/photos/7947699/pexels-photo-7947699.jpeg?auto=compress&cs=tinysrgb&w=800',
       tech: ['React', 'Node.js', 'Socket.io', 'MongoDB'],
       liveUrl: 'https://journel-o6zl.vercel.app/',
@@ -53,7 +56,7 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
           <p className={`text-xl max-w-3xl mx-auto ${
             darkMode ? 'text-gray-300' : 'text-gray-600'
           }`}>
-            Here are some of the projects I've worked on. Each one represents a unique challenge and learning experience.
+            Here are some of the projects I&apos;ve worked on. Each one represents a unique challenge and learning experience.
           </p>
         </div>
 
@@ -66,11 +69,12 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
               }`}
             >
               <div className="relative overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-48 object-cover hover:scale-110 transition-transform duration-500"
-                />
+                <Image
+                src={project.image}
+               alt={project.title}
+                layout="fill"
+                objectFit="cover"
+                className="hover:scale-110 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               

@@ -1,4 +1,6 @@
 import React from 'react';
+import Image from 'next/image';
+
 import { ChevronDown, Github, Linkedin, Mail } from 'lucide-react';
 
 interface HeroProps {
@@ -35,7 +37,7 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
             {/* Left side - Text content */}
             <div className="text-center lg:text-left order-2 lg:order-1">
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
-                <span className={`block mb-2 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Hello, I'm</span>
+                <span className={`block mb-2 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Hello, I&apos;m</span>
                 <span className="bg-gradient-to-r from-emerald-500 to-teal-600 bg-clip-text text-transparent">
                   UMUHIRE Germiane
                 </span>
@@ -104,11 +106,13 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
                 <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-2xl">
                   <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 p-1">
                     <div className="w-full h-full rounded-full overflow-hidden">
-                      <img
-                        src="/image/12.jpeg"
-                        alt="UMUHIRE Germiane"
-                        className="w-full h-full object-cover"
-                      />
+                       <Image
+                         src="/image/12.jpeg"
+                         alt="UMUHIRE Germiane"
+                          layout="fill"
+                          objectFit="cover"
+                         className="rounded-full"
+                           />
                     </div>
                   </div>
                 </div>

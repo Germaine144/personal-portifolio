@@ -43,7 +43,7 @@ const Contact: React.FC<ContactProps> = ({ darkMode }) => {
           <p className={`text-xl max-w-3xl mx-auto ${
             darkMode ? 'text-gray-300' : 'text-gray-600'
           }`}>
-            I'm always open to discussing new opportunities and interesting projects. Let's connect!
+             I&apos;m always open to discussing new opportunities and interesting projects. Let&apos;s connect!
           </p>
         </div>
 
@@ -103,12 +103,12 @@ const Contact: React.FC<ContactProps> = ({ darkMode }) => {
               <h3 className={`text-xl font-semibold mb-4 ${
                 darkMode ? 'text-white' : 'text-gray-900'
               }`}>
-                Let's Work Together
+                Let&apos;s Work Together
               </h3>
               <p className={`mb-4 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                I'm currently available for freelance work and full-time opportunities. 
-                Whether you have a project in mind or just want to chat about web development, 
-                I'd love to hear from you.
+                I&apos;m currently available for freelance work and full-time opportunities. 
+                 Whether you have a project in mind or just want to chat about web development, 
+                 I&apos;d love to hear from you.
               </p>
               <div className="flex space-x-4">
                 <span className="px-3 py-1 bg-teal-100 dark:bg-teal-900/30 text-teal-800 dark:text-teal-300 text-sm rounded-full">

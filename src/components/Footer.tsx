@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, Mail, Heart } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 interface FooterProps {
   darkMode: boolean;
@@ -65,7 +65,7 @@ const Footer: React.FC<FooterProps> = ({ darkMode }) => {
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4">Let's Connect</h4>
+            <h4 className="text-lg font-semibold mb-4">Let&apos;s Connect</h4>
             <p className="text-gray-400 mb-2">
               Always interested in new opportunities and collaborations.
             </p>
