@@ -50,8 +50,10 @@ const Contact: React.FC<ContactProps> = ({ darkMode }) => {
         <div className="grid md:grid-cols-2 gap-12">
           <div className="space-y-8">
             <div className="flex items-start space-x-4">
-              <div className="bg-emerald-100 dark:bg-emerald-900/30 p-3 rounded-full">
-                <Mail className="text-emerald-600 dark:text-emerald-400" size={24} />
+              <div className={`p-3 rounded-full ${
+                darkMode ? 'bg-emerald-900/30' : 'bg-emerald-100'
+              }`}>
+                <Mail className={darkMode ? 'text-emerald-400' : 'text-emerald-600'} size={24} />
               </div>
               <div>
                 <h3 className={`text-lg font-semibold mb-1 ${
@@ -66,8 +68,10 @@ const Contact: React.FC<ContactProps> = ({ darkMode }) => {
             </div>
 
             <div className="flex items-start space-x-4">
-              <div className="bg-teal-100 dark:bg-teal-900/30 p-3 rounded-full">
-                <Phone className="text-teal-600 dark:text-teal-400" size={24} />
+              <div className={`p-3 rounded-full ${
+                darkMode ? 'bg-teal-900/30' : 'bg-teal-100'
+              }`}>
+                <Phone className={darkMode ? 'text-teal-400' : 'text-teal-600'} size={24} />
               </div>
               <div>
                 <h3 className={`text-lg font-semibold mb-1 ${
@@ -82,8 +86,10 @@ const Contact: React.FC<ContactProps> = ({ darkMode }) => {
             </div>
 
             <div className="flex items-start space-x-4">
-              <div className="bg-cyan-100 dark:bg-cyan-900/30 p-3 rounded-full">
-                <MapPin className="text-cyan-600 dark:text-cyan-400" size={24} />
+              <div className={`p-3 rounded-full ${
+                darkMode ? 'bg-cyan-900/30' : 'bg-cyan-100'
+              }`}>
+                <MapPin className={darkMode ? 'text-cyan-400' : 'text-cyan-600'} size={24} />
               </div>
               <div>
                 <h3 className={`text-lg font-semibold mb-1 ${
@@ -111,7 +117,11 @@ const Contact: React.FC<ContactProps> = ({ darkMode }) => {
                  I&apos;d love to hear from you.
               </p>
               <div className="flex space-x-4">
-                <span className="px-3 py-1 bg-teal-100 dark:bg-teal-900/30 text-teal-800 dark:text-teal-300 text-sm rounded-full">
+                <span className={`px-3 py-1 text-sm rounded-full ${
+                  darkMode 
+                    ? 'bg-teal-900/30 text-teal-300' 
+                    : 'bg-teal-100 text-teal-800'
+                }`}>
                   Remote friendly
                 </span>
               </div>
@@ -137,8 +147,8 @@ const Contact: React.FC<ContactProps> = ({ darkMode }) => {
                   required
                   className={`w-full px-4 py-3 rounded-lg transition-colors duration-200 ${
                     darkMode 
-                      ? 'border border-gray-600 bg-gray-700 text-white focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500' 
-                      : 'border border-gray-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500'
+                      ? 'border border-gray-600 bg-gray-700 text-white placeholder-gray-400 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500' 
+                      : 'border border-gray-300 bg-white text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500'
                   }`}
                   placeholder="Your full name"
                 />
@@ -159,8 +169,8 @@ const Contact: React.FC<ContactProps> = ({ darkMode }) => {
                   required
                   className={`w-full px-4 py-3 rounded-lg transition-colors duration-200 ${
                     darkMode 
-                      ? 'border border-gray-600 bg-gray-700 text-white focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500' 
-                      : 'border border-gray-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500'
+                      ? 'border border-gray-600 bg-gray-700 text-white placeholder-gray-400 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500' 
+                      : 'border border-gray-300 bg-white text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500'
                   }`}
                   placeholder="your.email@example.com"
                 />
@@ -181,8 +191,8 @@ const Contact: React.FC<ContactProps> = ({ darkMode }) => {
                   rows={5}
                   className={`w-full px-4 py-3 rounded-lg transition-colors duration-200 resize-none ${
                     darkMode 
-                      ? 'border border-gray-600 bg-gray-700 text-white focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500' 
-                      : 'border border-gray-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500'
+                      ? 'border border-gray-600 bg-gray-700 text-white placeholder-gray-400 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500' 
+                      : 'border border-gray-300 bg-white text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500'
                   }`}
                   placeholder="Tell me about your project or just say hello!"
                 />
