@@ -27,15 +27,15 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
     {
       title: 'Construction Site App',
       description: 'The Construction Site App helps manage tasks, track progress, and improve team communication, ensuring efficient construction workflows through real-time updates and a mobile-friendly interface.',
-      image: '/image/construction.jpg', // ✅ Corrected path
+      image: '/image/cons.jpg', 
       tech: ['React', 'Next.js', 'Tailwind CSS'],
       liveUrl: 'https://construction-site-ten.vercel.app/',
-      githubUrl: '#',
+      githubUrl: 'https://www.figma.com/proto/8VOjyuRM36oEUcho5Z2GX6/E-Commerce-UI-Kit--Community-?node-id=91-75&t=uHinnhRFbUkBy04G-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1',
     },
     {
       title: 'Recipe Review',
       description: 'The Recipe Review App lets users explore, review, and share recipes. It features ratings, comments, and personalized collections for easier cooking and discovery.',
-      image: '/image/rev.jpg', // ✅ Corrected path
+      image: '/image/rev.jpg', 
       tech: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
       liveUrl: 'https://review-recipe.vercel.app/',
       githubUrl: 'https://github.com/Germaine144/review-recipe',

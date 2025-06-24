@@ -11,40 +11,38 @@ import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState<boolean | null>(null);
 
+  // Set initial dark mode before hydration to prevent FOUC
   useEffect(() => {
-    // Check for saved theme preference or default to light mode
     const savedTheme = localStorage.getItem('theme');
+
     if (savedTheme) {
       setDarkMode(savedTheme === 'dark');
+      document.documentElement.classList.toggle('dark', savedTheme === 'dark');
     } else {
-      // Check system preference
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       setDarkMode(prefersDark);
+      document.documentElement.classList.toggle('dark', prefersDark);
     }
   }, []);
 
   useEffect(() => {
-    // Save theme preference
+    if (darkMode === null) return; // Wait for initial value
+
     localStorage.setItem('theme', darkMode ? 'dark' : 'light');
-    
-    // Update document class for Tailwind dark mode
-    if (darkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
+    document.documentElement.classList.toggle('dark', darkMode);
   }, [darkMode]);
 
   const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
+    setDarkMode(prev => !prev);
   };
 
+  // Avoid rendering until darkMode is set
+  if (darkMode === null) return null;
+
   return (
-    <div className={`min-h-screen transition-colors duration-300 ${
-      darkMode ? 'bg-gray-900' : 'bg-white'
-    }`}>
+    <div className={`min-h-screen transition-colors duration-300 ${darkMode ? 'bg-gray-900' : 'bg-white'}`}>
       <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <Hero darkMode={darkMode} />
       <About darkMode={darkMode} />
