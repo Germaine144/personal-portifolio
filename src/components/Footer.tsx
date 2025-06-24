@@ -70,7 +70,7 @@ const Footer: React.FC<FooterProps> = ({ darkMode }) => {
               Always interested in new opportunities and collaborations.
             </p>
             <p className="text-gray-400">
-              Email: germiane.umuhire@example.com
+              Email: umuhiregermaine12@gmail.com
             </p>
           </div>
         </div>
